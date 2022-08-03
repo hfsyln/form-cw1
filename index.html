@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        .personel label 
+        { width: 200px;
+            display: inline-block;
+        }
+
+        .meslek
+        { padding-left: 30px;
+
+        }
+        .deneyim{
+            display: flex;
+    
+        }
+        .diger label{
+            width: 200px;
+            display: inline-block;
+        }
+        .sektör
+        {
+            width: 200px;
+        }
+        .pd {
+            display: flex;
+            flex-direction: row;
+    
+        }
+        .dil label {
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align:center;">ABC Tasarım Programı Kurulum ve Satış Sözleşmesi :)</h1>
+    <form action="result.html">
+
+        <fieldset>
+            <legend>Sözleşme Onay</legend>
+            <input type="checkbox" name="onay" id="onay" required>
+            <label for="onay">Aşağıdaki bilgilerin doğruluğunu kabul ediyorum ve sözleşmesini onaylıyorum.</label>
+            <br>
+            <input type="submit" value="Formu kaydet">
+            <input type="reset" value="Formu temizle">
+        </fieldset>
+
+        <fieldset class="personel">
+            <legend>Kişisel Bilgiler</legend>
+            <label for="Id">Form Güvenlik ID</label>
+            <input type="text" name="Güvenlik Id" id="Id" value="asdfgh" required>
+            <br>
+            <label for="name">Ad</label>
+            <input type="text" name="name" id="name">
+            <br>
+            <label for="lname">Soyad</label>
+            <input type="text" name="lname" id="lname">
+            <br>
+            <label for="age">Yaş</label>
+            <input type="number" name="age" id="age">
+            <br>
+            <label for="mail">Mail Adresi</label>
+            <input type="email" name="mail" id="mail">
+            <br>
+            <label for="file">Dosya seç</label>
+            <input type="file" name="file" id="file">
+        </fieldset>
+
+        <fieldset class="diger">
+            <legend>Diğer Bilgiler</legend>
+            <p class="meslek"><b> Buradaki alanlar mesleki deneyimi kapsar</b></p>
+
+            <label for="date">Sektöre Giriş Tarihi</label>
+            <input type="date" name="giriş tarihi" id="date">
+            <br>
+            <div class="deneyim">
+                <div class="sektör">
+                    <p>Sektör Deneyimi</p>
+                </div>
+                <div>
+                    <input type="radio" name="deneyim" id="1-5">
+                    <label for="1-5">1-5 yıl</label>
+                    <br>
+                    <input type="radio" name="deneyim" id="6-10">
+                    <label for="6-10">6-10 yıl</label>
+                    <br>
+                    <input type="radio" name="deneyim" id="11-15">
+                    <label for="11-15">11-15 yıl</label>
+                    <br>
+                    <input type="radio" name="deneyim" id="15+">
+                    <label for="15+">15- üzeri</label>
+                </div>
+            </div>
+            <br>
+        <div class="pd">
+            <div class="dil">
+                <label for="dil">Programlama Dilleri</label>
+            </div>
+            <div>
+                <select name="Seçilen dil" id="dil" size="5">
+                    <option value="C#">C#</option>
+                    <option value="PHP">PHP</option>
+                    <option value="Java">Java</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="Pyhton">Pyhton</option>
+                </select>
+            </div>
+        </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Sözleşme Kopyası</legend>
+            <textarea name="yorum" id="" cols="40" rows="5" readonly>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, neque error sint aspernatur amet soluta doloremque maxime debitis facere perspiciatis ullam iure numquam, voluptas totam laudantium pariatur rem, nisi aut autem? Error nulla doloribus rem sequi ullam optio expedita iusto deleniti laborum dolorum! Itaque dolor iure laudantium ipsum inventore. Voluptates.</textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Mail Listesi</legend>
+            <label for="yes">Mail Listesine Katılmak İstiyorum</label>
+            <input type="radio" name="onay" id="yes" value="yes" checked>
+            <br>
+            <label for="no">Mail Listesine Katılmak İstemiyorum</label>
+            <input type="radio" name="onay" id="no" value="no">
+        </fieldset>
+
+    </form>
+</body>
+</html>
